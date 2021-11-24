@@ -1,0 +1,11 @@
+@import '../../node_modules/reset-css/reset.css';
+@import './elements/colors';
+@import './settings/fonts';
+
+* {
+    box-sizing: border-box;
+  }
+
+  body{
+      font-family: $font-base;
+  }

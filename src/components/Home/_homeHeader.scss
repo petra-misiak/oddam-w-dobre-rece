@@ -1,0 +1,79 @@
+@import '../../scss/elements/colors';
+@import '../../scss/settings/fonts';
+
+.home-header{
+    display: flex;  
+  
+        &-img{
+            width: 55%;
+            position: absolute;
+            left: -205px;
+        }
+
+        &-right{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            &-top{
+                &-first{
+                    display: flex;
+                    justify-content: flex-end;
+                    margin-right: 118px;
+                    margin-top: 46px;
+                    margin-bottom: 30px;                 
+                    &-all{
+                        font-family: $font-base;
+                        color: $color-seconday;
+                        font-size: 18px;
+                        margin-left: 15px;
+                    }
+                }
+                &-second{
+                    display: flex;
+                    justify-content: flex-end;
+                    margin-right: 118px;
+                    margin-top: 46px;
+                    margin-bottom: 100px;   
+                    &-all{
+                        font-family: $font-base;
+                        color: $color-primary;
+                        margin-left: 55px;
+                        font-size: 18px;
+                    }
+                }
+            }
+        
+            &-bottom{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-right: 130px;
+                
+                &-title1{
+                    font-family: $font-base;
+                    font-size: 38px;
+                    color: $color-primary;
+                    margin-bottom: 25px;
+                }
+                &-decoration{
+                    margin-bottom: 80px;
+                }
+            }
+
+            &-buttons{
+
+                &-all{
+                    padding: 20px;
+                    font-family: $font-base;
+                    color: $color-seconday;
+                    font-size: 36px;
+                    background-color: $color-light-grey;
+                    border: 0.75px solid #3C3C3C;
+                    margin-left: 20px;
+                }
+
+            }
+        }
+
+    }
