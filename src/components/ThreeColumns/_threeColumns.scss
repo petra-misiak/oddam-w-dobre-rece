@@ -1,0 +1,87 @@
+@import '../../scss/elements/colors';
+@import '../../scss/settings/fonts';
+
+.columns{
+    position: relative;
+    &-background{
+        &-img{
+            width: 100%;
+        }
+    }
+    &-all{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        bottom: 5%;
+        &-first{
+            width: 33%;
+            text-align: center;
+            margin: 46px 100px 50px 163px;
+            &-h2{
+                font-family: $font-base;
+                font-size: 90px;
+                color: #5E5322;
+                margin-bottom: 10px;
+            }
+            &-h3{
+                font-family: $font-base;
+                font-size: 18px;
+                color: $color-primary;
+                margin-bottom: 28px;
+            }
+            &-paragraph{
+                font-family: $font-alt;
+                font-size: 16px;
+                color: $color-primary;
+                font-weight: 100;
+            }
+        }
+        &-second{
+            width: 33%;
+            text-align: center;
+            margin: 46px 100px 50px 100px;
+            &-h2{
+                font-family: $font-base;
+                font-size: 90px;
+                color: #5E5322;
+                margin-bottom: 10px;
+            }
+            &-h3{
+                font-family: $font-base;
+                font-size: 18px;
+                color: $color-primary;
+                margin-bottom: 28px;
+            }
+            &-paragraph{
+                font-family: $font-alt;
+                font-size: 16px;
+                color: $color-primary;
+                font-weight: 100;
+            }
+        }
+        &-third{
+            width: 33%;
+            text-align: center;
+            margin: 46px 163px 50px 100px;
+            &-h2{
+                font-family: $font-base;
+                font-size: 90px;
+                color: #5E5322;
+                margin-bottom: 10px;
+            }
+            &-h3{
+                font-family: $font-base;
+                font-size: 18px;
+                color: $color-primary;
+                margin-bottom: 28px;
+            }
+            &-paragraph{
+                font-family: $font-alt;
+                font-size: 16px;
+                color: $color-primary;
+                font-weight: 100;
+            }
+        }
+    }
+}

@@ -3,6 +3,7 @@
 
 .home-header{
     display: flex;  
+    max-width: margin 0;
   
         &-img{
             width: 55%;
@@ -62,7 +63,7 @@
             }
 
             &-buttons{
-
+                margin-bottom: 80px;
                 &-all{
                     padding: 20px;
                     font-family: $font-base;

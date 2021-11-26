@@ -1,8 +1,11 @@
 import React from 'react';
-import { Link } from 'react-scroll';
+import { Link as Scroll } from 'react-scroll';
+import { Link, BrowserRouter } from 'react-router-dom';
 import './_homeHeader.scss';
 import HomeHeroImage from '../../assets/HomeHeroImage.jpg';
 import Decoration from '../../assets/Decoration.svg';
+import Login from '../Register/Login';
+import MakeAccount from '../Register/MakeAccount';
 
 
 const HomeHeader = () => {
@@ -11,60 +14,48 @@ const HomeHeader = () => {
             <img src={HomeHeroImage} alt="people" className="home-header-img"></img>
             <div className="home-header-right">
                 <div className="home-header-right-top">
-                    <ul className="home-header-right-top-first">
-                        <Link
-                            activeClass="active"
-                            to="carousel"
-                            spy={true}
-                            offset={-350}
-                            duration={500}
-                            className="home-header-right-top-first-all">Zaloguj</Link>
-                        <Link
-                            activeClass="active"
-                            to="carousel"
-                            spy={true}
-                            offset={-350}
-                            duration={500}
-                            className="home-header-right-top-first-all">Założ konto</Link>
-                    </ul>
+                    <BrowserRouter >
+                        <Link to="/" component={Login}>Zaloguj</Link>
+                        <Link to="/" component={MakeAccount}>Założ konto</Link>
+                    </BrowserRouter>
                     {/* </div>
                 <div className="home-header-top2"> */}
                     <ul className="home-header-right-top-second">
-                        <Link
+                        <Scroll
                             activeClass="active"
                             to="carousel"
                             spy={true}
                             offset={-350}
                             duration={500}
-                            className="home-header-right-top-second-all">Start</Link>
-                        <Link
+                            className="home-header-right-top-second-all">Start</Scroll>
+                        <Scroll
                             activeClasss="active"
                             to="carousel"
                             spy={true}
                             offset={-350}
                             duration={500}
-                            className="home-header-right-top-second-all">O co chodzi?</Link>
-                        <Link
+                            className="home-header-right-top-second-all">O co chodzi?</Scroll>
+                        <Scroll
                             activeClass="active"
                             to="carousel"
                             spy={true}
                             offset={-350}
                             duration={500}
-                            className="home-header-right-top-second-all">O nas</Link>
-                        <Link
+                            className="home-header-right-top-second-all">O nas</Scroll>
+                        <Scroll
                             activeClass="active"
                             to="carousel"
                             spy={true}
                             offset={-350}
                             duration={500}
-                            className="home-header-right-top-second-all">Fundacja i organizacje</Link>
-                        <Link
+                            className="home-header-right-top-second-all">Fundacja i organizacje</Scroll>
+                        <Scroll
                             activeClass="active"
                             to="carousel"
                             spy={true}
                             offset={-350}
                             duration={500}
-                            className="home-header-right-top-second-all">Kontakt</Link>
+                            className="home-header-right-top-second-all">Kontakt</Scroll>
                     </ul>
                 </div>
                 <div className="home-header-right-bottom">
