@@ -1,41 +1,41 @@
 @import '../../scss/elements/colors';
 @import '../../scss/settings/fonts';
 
-.home-header{
+.home{
+    width: 100%;
     display: flex;  
     max-width: margin 0;
-  
         &-img{
-            width: 55%;
-            position: absolute;
-            left: -205px;
+            width: 50%;
+            &-img{
+                width: 110%;
+                margin-left: -150px;
+            }
         }
-
         &-right{
-            width: 100%;
+            width: 50%;
             display: flex;
             flex-direction: column;
-            align-items: flex-end;
+            align-items: center;
             &-top{
-                &-first{
-                    display: flex;
-                    justify-content: flex-end;
-                    margin-right: 118px;
-                    margin-top: 46px;
-                    margin-bottom: 30px;                 
-                    &-all{
-                        font-family: $font-base;
-                        color: $color-seconday;
-                        font-size: 18px;
-                        margin-left: 15px;
-                    }
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                margin-right: 30px;
+                margin-top: 37px;
+                &-first{  
+                    font-family: $font-base;
+                    color: $color-seconday;
+                    font-size: 18px;
+                    text-decoration: none;   
+                    margin-left: 30px;      
                 }
-                &-second{
+            }
+            &-top2{
                     display: flex;
                     justify-content: flex-end;
-                    margin-right: 118px;
                     margin-top: 46px;
-                    margin-bottom: 100px;   
+                    margin-bottom: 80px;   
                     &-all{
                         font-family: $font-base;
                         color: $color-primary;
@@ -43,14 +43,10 @@
                         font-size: 18px;
                     }
                 }
-            }
-        
             &-bottom{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                margin-right: 130px;
-                
                 &-title1{
                     font-family: $font-base;
                     font-size: 38px;
@@ -61,11 +57,9 @@
                     margin-bottom: 80px;
                 }
             }
-
             &-buttons{
-                margin-bottom: 80px;
                 &-all{
-                    padding: 20px;
+                    padding: 13px 90px;
                     font-family: $font-base;
                     color: $color-seconday;
                     font-size: 36px;
@@ -73,8 +67,6 @@
                     border: 0.75px solid #3C3C3C;
                     margin-left: 20px;
                 }
-
             }
         }
-
     }
