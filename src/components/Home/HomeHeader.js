@@ -18,7 +18,7 @@ const HomeHeader = () => {
                 <div className="home-right-top">
                     <BrowserRouter >
                         <Link to="/" component={Login} className="home-right-top-first">Zaloguj</Link>
-                        <Link to="/" component={MakeAccount} className="home-right-top-first">Założ konto</Link>
+                        <Link to="/" component={MakeAccount} className="home-right-top-first1">Założ konto</Link>
                     </BrowserRouter>
                 </div>
                 <ul className="home-right-top2">

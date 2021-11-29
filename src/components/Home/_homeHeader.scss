@@ -28,7 +28,17 @@
                     color: $color-seconday;
                     font-size: 18px;
                     text-decoration: none;   
-                    margin-left: 30px;      
+                    margin-left: 30px;    
+                    padding: 9px 10px;
+                }
+                &-first1{
+                    font-family: $font-base;
+                    color: $color-seconday;
+                    font-size: 18px;
+                    text-decoration: none;   
+                    margin-left: 30px; 
+                    border: 0.75px solid #FAD648;
+                    padding: 9px 10px;
                 }
             }
             &-top2{
