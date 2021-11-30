@@ -1,4 +1,3 @@
-import './_Text.scss';
 import Decoration from '../../assets/Decoration.svg';
 
 const Text = () => {

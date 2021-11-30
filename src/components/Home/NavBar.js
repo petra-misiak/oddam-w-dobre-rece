@@ -1,4 +1,3 @@
-import './_NavBar.scss';
 import { Link as Scroll } from 'react-scroll';
 
 const NavBar = () => {

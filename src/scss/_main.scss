@@ -1,6 +1,15 @@
-@import '../../node_modules/reset-css/reset.css';
-@import './elements/colors';
+@import './generic/reset';
+@import './settings/colors';
 @import './settings/fonts';
+@import './elements/AboutUs';
+@import './elements/Buttons';
+@import './elements/FourSteps';
+@import './elements/homeHeader';
+@import './elements/NavBar';
+@import './elements/Registration';
+@import './elements/Tabs';
+@import './elements/Text';
+@import './elements/threeColumns';
 
 * {
     box-sizing: border-box;

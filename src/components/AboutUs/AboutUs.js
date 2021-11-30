@@ -1,4 +1,3 @@
-import './_AboutUs.scss';
 import Decoration from '../../assets/Decoration.svg';
 import People from '../../assets/People.jpg';
 import Signature from '../../assets/Signature.svg';

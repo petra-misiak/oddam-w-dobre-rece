@@ -1,5 +1,4 @@
 import React from 'react';
-import './_homeHeader.scss';
 import HomeHeroImage from '../../assets/HomeHeroImage.jpg';
 import Text from './Text';
 import Buttons from './Buttons';

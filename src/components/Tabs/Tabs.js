@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './_Tabs.scss';
 import Decoration from '../../assets/Decoration.svg';
 
 const Tabs = () => {

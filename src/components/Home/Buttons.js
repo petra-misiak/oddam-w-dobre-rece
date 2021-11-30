@@ -1,5 +1,3 @@
-import './_Buttons.scss';
-
 const Buttons = () => {
     return (
         <div className="buttons">

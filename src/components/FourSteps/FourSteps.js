@@ -1,4 +1,3 @@
-import './_FourSteps.scss';
 import Decoration from '../../assets/Decoration.svg';
 import Icon1 from '../../assets/Icon1.svg';
 import Icon2 from '../../assets/Icon2.svg';

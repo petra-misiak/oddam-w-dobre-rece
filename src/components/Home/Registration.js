@@ -1,4 +1,3 @@
-import './_Registration.scss';
 import { Link, BrowserRouter } from 'react-router-dom';
 import Login from '../Register/Login';
 import MakeAccount from '../Register/MakeAccount';
