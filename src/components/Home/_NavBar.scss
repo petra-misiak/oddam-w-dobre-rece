@@ -1,0 +1,15 @@
+@import '../../scss/elements/colors';
+@import '../../scss/settings/fonts';
+
+.nav-bar{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 46px;
+    margin-bottom: 80px;   
+    &-all{
+        font-family: $font-base;
+        color: $color-primary;
+        margin-left: 55px;
+        font-size: 18px;
+    }
+}

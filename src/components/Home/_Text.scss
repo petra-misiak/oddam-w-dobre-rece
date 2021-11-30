@@ -1,0 +1,17 @@
+@import '../../scss/elements/colors';
+@import '../../scss/settings/fonts';
+
+.text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-title1{
+        font-family: $font-base;
+        font-size: 38px;
+        color: $color-primary;
+        margin-bottom: 25px;
+    }
+    &-decoration{
+        margin-bottom: 80px;
+    }
+}

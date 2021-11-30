@@ -8,8 +8,7 @@
         &-img{
             width: 50%;
             &-img{
-                width: 110%;
-                margin-left: -150px;
+                width: 85%;
             }
         }
         &-right{
@@ -17,66 +16,5 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            &-top{
-                width: 100%;
-                display: flex;
-                justify-content: flex-end;
-                margin-right: 30px;
-                margin-top: 37px;
-                &-first{  
-                    font-family: $font-base;
-                    color: $color-seconday;
-                    font-size: 18px;
-                    text-decoration: none;   
-                    margin-left: 30px;    
-                    padding: 9px 10px;
-                }
-                &-first1{
-                    font-family: $font-base;
-                    color: $color-seconday;
-                    font-size: 18px;
-                    text-decoration: none;   
-                    margin-left: 30px; 
-                    border: 0.75px solid #FAD648;
-                    padding: 9px 10px;
-                }
-            }
-            &-top2{
-                    display: flex;
-                    justify-content: flex-end;
-                    margin-top: 46px;
-                    margin-bottom: 80px;   
-                    &-all{
-                        font-family: $font-base;
-                        color: $color-primary;
-                        margin-left: 55px;
-                        font-size: 18px;
-                    }
-                }
-            &-bottom{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                &-title1{
-                    font-family: $font-base;
-                    font-size: 38px;
-                    color: $color-primary;
-                    margin-bottom: 25px;
-                }
-                &-decoration{
-                    margin-bottom: 80px;
-                }
-            }
-            &-buttons{
-                &-all{
-                    padding: 13px 90px;
-                    font-family: $font-base;
-                    color: $color-seconday;
-                    font-size: 36px;
-                    background-color: $color-light-grey;
-                    border: 0.75px solid #3C3C3C;
-                    margin-left: 20px;
-                }
-            }
         }
     }

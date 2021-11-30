@@ -1,0 +1,109 @@
+@import '../../scss/elements/colors';
+@import '../../scss/settings/fonts';
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    // position: relative;
+
+    &-title{
+        text-align: center;
+
+        &-h2{
+            font-family: $font-base;
+            font-size: 38px;
+            color: $color-primary;
+            margin-bottom: 40px;
+        }
+        &-img{
+            margin-bottom: 90px;
+        }
+    }
+  }
+  .bloc-tabs {
+    display: flex;
+    justify-content: center;
+  }
+  .tabs {
+    padding: 6px 42px;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: content-box;
+    background-color: white;
+    font-family: $font-base;
+    font-size: 24px;
+    color: $color-primary;
+    margin-bottom: 80px;
+    
+  }
+  .tabs:not(:last-child){
+      margin-right: 160px;
+    // border-right: 1px solid rgba(0, 0, 0, 0.274);
+  }
+  
+  .active-tabs  {
+    border: 0.75px solid $color-primary;
+
+  }
+  
+  .active-tabs::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% + 2px);
+    height: 5px;
+    background: rgb(88, 147, 241);
+  }
+  
+  
+  
+  button {
+    border: none;
+    
+  }
+  .content-tabs {
+    flex-grow : 1;
+  }
+  .content {
+    width: 100%;
+    display: none;
+    text-align: center;
+  }
+  .content h3 {
+    padding: 0px 0 5px 0px;
+    font-family: $font-base;
+    font-size: 22px;
+    color: $color-primary;
+  }
+  .content hr {
+    width: 100px;
+    height: 2px;
+    background: #222;
+    margin-bottom: 5px;
+  }
+  .content ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .content li{
+      font-family: $font-alt;
+      font-size: 26px;
+      color: $color-primary;
+  }
+  .active-content {
+    display: block;
+  }

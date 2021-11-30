@@ -1,0 +1,14 @@
+@import '../../scss/elements/colors';
+@import '../../scss/settings/fonts';
+ 
+ .buttons{
+    &-all{
+        padding: 13px 90px;
+        font-family: $font-base;
+        color: $color-seconday;
+        font-size: 36px;
+        background-color: $color-light-grey;
+        border: 0.75px solid #3C3C3C;
+        margin-left: 20px;
+    }
+}
