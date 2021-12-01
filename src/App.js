@@ -7,6 +7,7 @@ import Tabs from "./components/Tabs/Tabs";
 import ThreeColumns from "./components/ThreeColumns/ThreeColumns";
 import MakeAccount from './components/Register/MakeAccount';
 import Login from './components/Register/Login'
+import Contact from './components/Contact/Contact';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <FourSteps />
         <AboutUs />
         <Tabs />
+        <Contact />
       </div>
     </BrowserRouter>
   );

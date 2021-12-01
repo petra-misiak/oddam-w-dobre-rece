@@ -9,33 +9,33 @@ const NavBar = () => {
                 spy={true}
                 offset={-350}
                 duration={500}
-                className="nav-bar-all" id="start">Start</Scroll>
+                className="nav-bar-all">Start</Scroll>
             <Scroll
                 activeClasss="active"
                 to="steps"
                 spy={true}
-                offset={0}
+                offset={-150}
                 duration={500}
                 className="nav-bar-all">O co chodzi?</Scroll>
             <Scroll
                 activeClass="active"
                 to="about"
                 spy={true}
-                offset={0}
+                offset={-100}
                 duration={500}
                 className="nav-bar-all">O nas</Scroll>
             <Scroll
                 activeClass="active"
-                to="carousel"
+                to="organizations"
                 spy={true}
-                offset={-350}
+                offset={0}
                 duration={500}
                 className="nav-bar-all">Fundacja i organizacje</Scroll>
             <Scroll
                 activeClass="active"
-                to="carousel"
+                to="contact"
                 spy={true}
-                offset={-350}
+                offset={500}
                 duration={500}
                 className="nav-bar-all">Kontakt</Scroll>
         </ul>

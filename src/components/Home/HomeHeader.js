@@ -8,7 +8,7 @@ import Registration from './Registration';
 
 const HomeHeader = () => {
     return (
-        <section className="home">
+        <section className="home" id="start">
             <div className="home-img">
                 <img src={HomeHeroImage} alt="people" className="home-img-img"></img>
             </div>

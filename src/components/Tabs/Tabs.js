@@ -9,7 +9,7 @@ const Tabs = () => {
     };
 
     return (
-        <section className="container">
+        <section className="container" id="organizations">
             <div className="container-title">
                 <h2 className="container-title-h2">Komu pomagamy?</h2>
                 <img src={Decoration} alt="Decoration" className="container-title-img"></img>
