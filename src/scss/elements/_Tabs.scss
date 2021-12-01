@@ -6,16 +6,12 @@
     margin: 0;
     padding: 0;
   }
-  
   .container {
     display: flex;
     flex-direction: column;
     margin-top: 70px;
-    // position: relative;
-
     &-title{
         text-align: center;
-
         &-h2{
             font-family: $font-base;
             font-size: 38px;
@@ -41,38 +37,19 @@
     font-size: 24px;
     color: $color-primary;
     margin-bottom: 80px;
-    
   }
   .tabs:not(:last-child){
-      margin-right: 160px;
-    // border-right: 1px solid rgba(0, 0, 0, 0.274);
+      margin-right: 70px;
   }
-  
   .active-tabs  {
     border: 0.75px solid $color-primary;
-
   }
-  
   .active-tabs::before {
     content: "";
     display: block;
-    position: absolute;
-    top: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% + 2px);
-    height: 5px;
-    background: rgb(88, 147, 241);
-  }
-  
-  
-  
+  } 
   button {
     border: none;
-    
-  }
-  .content-tabs {
-    flex-grow : 1;
   }
   .content {
     width: 100%;
@@ -80,30 +57,126 @@
     text-align: center;
   }
   .content h3 {
-    padding: 0px 0 5px 0px;
     font-family: $font-base;
     font-size: 22px;
     color: $color-primary;
+    margin-bottom: 66px;
   }
   .content hr {
-    width: 100px;
+    width: 100%;
     height: 2px;
     background: #222;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
   }
-  .content ul {
+  .active-content {
+    display: block;
+  }
+  .content-tabs-list{
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+    &-first{
+      width: 75%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      &-h4{
+        font-family: $font-alt;
+        font-size: 26px;
+        color: $color-primary;
+      }
+      &-p1{
+        margin-left: auto;
+        font-family: $font-alt;
+        font-size: 18px;
+        color: $color-primary;
+        margin-top: -14px;
+      }
+      &-p2{
+        font-family: $font-alt;
+        font-size: 18px;
+        color: $color-primary;
+        margin-bottom: 25px;
+      }
+    }
+    &-second{
+      width: 75%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      &-h4{
+        font-family: $font-alt;
+        font-size: 26px;
+        color: $color-primary;
+        margin-top: 15px;
+      }
+      &-p1{
+        margin-left: auto;
+        font-family: $font-alt;
+        font-size: 18px;
+        color: $color-primary;
+        margin-top: -14px;
+      }
+      &-p2{
+        font-family: $font-alt;
+        font-size: 18px;
+        color: $color-primary;
+        margin-bottom: 25px;
+      }
   }
-  .content li{
-      font-family: $font-alt;
-      font-size: 26px;
-      color: $color-primary;
-  }
-  .active-content {
-    display: block;
-  }
+    &-third{
+      width: 75%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      &-h4{
+        font-family: $font-alt;
+        font-size: 26px;
+        color: $color-primary;
+        margin-top: 15px;
+      }
+      &-p1{
+        margin-left: auto;
+        font-family: $font-alt;
+        font-size: 18px;
+        color: $color-primary;
+        margin-top: -14px;
+      }
+      &-p2{
+        font-family: $font-alt;
+        font-size: 18px;
+      }
+    }
+}
+.block-numbers {
+  display: flex;
+  justify-content: center;
+}
+.numbers{
+  padding: 13px 15px;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: content-box;
+  background-color: white;
+  font-family: $font-base;
+  font-size: 18px;
+  color: $color-primary;
+  margin-bottom: 80px;
+  margin-top: 60px;
+}
+.active-numbers  {
+  border: 0.75px solid $color-primary;
+}
+.active-numbers::before {
+  content: "";
+  display: block;
+} 
+button {
+  border: none;
+}

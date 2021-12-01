@@ -1,15 +1,11 @@
-import { Link, BrowserRouter } from 'react-router-dom';
-import Login from '../Register/Login';
-import MakeAccount from '../Register/MakeAccount';
+import { Link } from 'react-router-dom';
 
 const Registration = () => {
     return (
-        <div className="registration-top">
-            <BrowserRouter >
-                <Link to="/logowanie" component={Login} className="registration-top-first">Zaloguj</Link>
-                <Link to="/rejestracja" component={MakeAccount} className="registration-top-first1">Założ konto</Link>
-            </BrowserRouter>
-        </div>
+        <nav className="registration-top">
+            <Link to="/logowanie" className="registration-top-first">Zaloguj</Link>
+            <Link to="/rejestracja" className="registration-top-first1">Założ konto</Link>
+        </nav>
     )
 }
 export default Registration;

@@ -3,9 +3,9 @@ import React from 'react'
 const Login = () => {
     return (
         <div>
-            <h2>Zaloguj się</h2>
+            Zaloguj sie
         </div>
     )
 }
 
-export default Login;
+export default Login
