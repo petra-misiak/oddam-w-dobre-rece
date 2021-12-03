@@ -2,6 +2,7 @@
 @import '../settings/fonts';
  
  .buttons{
+     display: flex;
     &-all{
         padding: 13px 90px;
         font-family: $font-base;
@@ -10,5 +11,7 @@
         background-color: $color-light-grey;
         border: 0.75px solid #3C3C3C;
         margin-left: 20px;
+        text-decoration: none;
+        text-align: center;
     }
 }

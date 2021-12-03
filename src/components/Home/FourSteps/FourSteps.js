@@ -1,8 +1,8 @@
-import Decoration from '../../assets/Decoration.svg';
-import Icon1 from '../../assets/Icon1.svg';
-import Icon2 from '../../assets/Icon2.svg';
-import Icon3 from '../../assets/Icon3.svg';
-import Icon4 from '../../assets/Icon4.svg';
+import Decoration from '../../../assets/Decoration.svg';
+import Icon1 from '../../../assets/Icon1.svg';
+import Icon2 from '../../../assets/Icon2.svg';
+import Icon3 from '../../../assets/Icon3.svg';
+import Icon4 from '../../../assets/Icon4.svg';
 
 const FourSteps = () => {
     return (

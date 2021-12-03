@@ -3,11 +3,13 @@
 .home{
     width: 100%;
     display: flex;  
-    max-width: margin 0;
+    flex-direction: column;
         &-img{
-            width: 50%;
+            width: 40%;
+            display: flex;
+            align-items: center;
             &-img{
-                width: 85%;
+                width: 100%;
             }
         }
         &-right{

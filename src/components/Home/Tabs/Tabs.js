@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Decoration from '../../assets/Decoration.svg';
+import Decoration from '../../../assets/Decoration.svg';
 
 const Tabs = () => {
     const [toggleState, setToggleState] = useState(1);

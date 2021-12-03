@@ -1,15 +1,43 @@
 @import '../settings/colors';
 @import '../settings/fonts';
 
+.registration{
+    margin-right: 152px;
+}
+
+.registration-top{
+    // width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    // margin-right: 30px;
+    margin-top: 37px;
+    &-first{  
+        font-family: $font-base;
+        color: $color-seconday;
+        font-size: 18px;
+        text-decoration: none;   
+        margin-left: 30px;    
+        padding: 9px 10px;
+    }
+    &-first1{
+        font-family: $font-base;
+        color: $color-seconday;
+        font-size: 18px;
+        text-decoration: none;   
+        margin-left: 30px; 
+        border: 0.75px solid #FAD648;
+        padding: 9px 10px;
+    }
+}
 .nav-bar{
     display: flex;
     justify-content: flex-end;
     margin-top: 46px;
-    margin-bottom: 80px;   
     &-all{
         font-family: $font-base;
         color: $color-primary;
         margin-left: 55px;
         font-size: 18px;
+        text-decoration: none;
     }
 }

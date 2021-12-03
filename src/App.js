@@ -1,29 +1,28 @@
 import './scss/_main.scss';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import AboutUs from "./components/AboutUs/AboutUs";
-import FourSteps from "./components/FourSteps/FourSteps";
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import HomeHeader from "./components/Home/HomeHeader";
-import Tabs from "./components/Tabs/Tabs";
-import ThreeColumns from "./components/ThreeColumns/ThreeColumns";
 import MakeAccount from './components/Register/MakeAccount';
 import Login from './components/Register/Login'
-import Contact from './components/Contact/Contact';
+// import NavBar from './components/NavBar/NavBar';
+import Collection from './components/ButtonsLinks/Collection';
+import GiveThings from './components/ButtonsLinks/GiveThings';
+import NavBar from './components/NavBar/NavBar';
+
+
 
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <HomeHeader />
+        <NavBar />
         <Routes>
+          <Route path="/home" element={<HomeHeader />} />
           <Route path="/logowanie" element={<Login />} />
           <Route path="/rejestracja" element={<MakeAccount />} />
+          <Route path="/oddaj-rzecy" element={<Collection />} />
+          <Route path="/zbiorka" element={<GiveThings />} />
         </Routes>
-        <ThreeColumns />
-        <FourSteps />
-        <AboutUs />
-        <Tabs />
-        <Contact />
       </div>
     </BrowserRouter>
   );

@@ -1,6 +1,6 @@
-import Decoration from '../../assets/Decoration.svg';
-import People from '../../assets/People.jpg';
-import Signature from '../../assets/Signature.svg';
+import Decoration from '../../../assets/Decoration.svg';
+import People from '../../../assets/People.jpg';
+import Signature from '../../../assets/Signature.svg'
 
 const AboutUs = () => {
     return (

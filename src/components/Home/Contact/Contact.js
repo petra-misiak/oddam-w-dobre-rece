@@ -1,8 +1,8 @@
 import React from 'react';
-import BackgroundContactForm from '../../assets/BackgroundContactForm.jpg';
-import Decoration from '../../assets/Decoration.svg';
-import Facebook from '../../assets/Facebook.svg';
-import Instagram from '../../assets/Instagram.svg';
+import BackgroundContactForm from '../../../assets/BackgroundContactForm.jpg';
+import Decoration from '../../../assets/Decoration.svg';
+import Facebook from '../../../assets/Facebook.svg';
+import Instagram from '../../../assets/Instagram.svg';
 import useForm from './useForm';
 import validate from './validateInfo';
 

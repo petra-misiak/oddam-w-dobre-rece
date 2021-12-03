@@ -1,5 +1,5 @@
 import React from 'react';
-import ColumnsBackground from '../../assets/ColumnsBackground.png';
+import ColumnsBackground from '../../../assets/ColumnsBackground.png';
 
 const ThreeColumns = () => {
     return (

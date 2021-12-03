@@ -1,4 +1,4 @@
-import Decoration from '../../assets/Decoration.svg';
+import Decoration from '../../../assets/Decoration.svg';
 
 const Text = () => {
     return (
