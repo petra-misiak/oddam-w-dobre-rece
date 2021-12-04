@@ -1,0 +1,33 @@
+@import '../settings/colors';
+@import '../settings/fonts';
+
+.logout{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+    &-title{
+        text-align: center;
+        
+        &-h3{
+            font-family: $font-base;
+            font-size: 40px;
+            color: $color-primary;
+            text-align: center;
+            margin-bottom: 31px;
+        }
+    }
+    &-button{
+        text-align: center;
+        margin-top: 59px;
+        &-link{
+           text-decoration: none;
+           font-family: $font-base;
+           font-size: 18px;
+           color: $color-black;
+           border: 0.75px solid #3C3C3C;
+           padding: 13px 17px 13px 18px;
+        }
+    }
+}

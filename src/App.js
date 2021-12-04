@@ -3,13 +3,10 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import HomeHeader from "./components/Home/HomeHeader";
 import MakeAccount from './components/Register/MakeAccount';
 import Login from './components/Register/Login'
-// import NavBar from './components/NavBar/NavBar';
 import Collection from './components/ButtonsLinks/Collection';
 import GiveThings from './components/ButtonsLinks/GiveThings';
 import NavBar from './components/NavBar/NavBar';
-
-
-
+import LogOut from './components/LogOut/LogOut';
 
 function App() {
   return (
@@ -22,6 +19,7 @@ function App() {
           <Route path="/rejestracja" element={<MakeAccount />} />
           <Route path="/oddaj-rzecy" element={<Collection />} />
           <Route path="/zbiorka" element={<GiveThings />} />
+          <Route path="/wylogowano" element={<LogOut />} />
         </Routes>
       </div>
     </BrowserRouter>

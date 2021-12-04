@@ -1,0 +1,103 @@
+@import '../settings/colors';
+@import '../settings/fonts';
+
+.register{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-title{
+        margin-top: 90px;
+        &-h3{
+            font-family: $font-base;
+            font-size: 40px;
+            color: $color-primary;
+            text-align: center;
+            margin-bottom: 31px;
+        }
+    }
+    &-form{
+      background-color: $color-contact;
+      padding: 40px 68px;
+      margin-top: 67px;
+      margin-bottom: 40px;
+        &-first{
+            display: flex;
+            flex-direction: column;
+            &-label{
+                color: $color-primary;
+                font-size: 16px;
+                font-family: $font-base;
+                font-weight: 600;
+                margin: 10px 275px 40px 0;
+            }
+            &-input{
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                background-color: $color-contact;
+                margin-bottom: 31px;
+                border-bottom: 1px solid $color-seconday;
+            }
+        }
+        &-second{
+            display: flex;
+            flex-direction: column;
+            &-label{
+                color: $color-primary;
+                font-size: 16px;
+                font-family: $font-base;
+                font-weight: 600;
+                margin-bottom: 40px;
+            }
+            &-input{
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                background-color: $color-contact;
+                margin-bottom: 31px;
+                border-bottom: 1px solid $color-seconday;
+            }
+        }
+        &-third{
+            display: flex;
+            flex-direction: column;
+            &-label{
+                color: $color-primary;
+                font-size: 16px;
+                font-family: $font-base;
+                font-weight: 600;
+                margin-bottom: 40px;
+            }
+            &-input{
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                background-color: $color-contact;
+                border-bottom: 1px solid $color-seconday;
+            }
+        }
+    }
+    &-buttons{
+        display: flex;
+        width: 40%;
+        justify-content: space-between;
+        align-items: center;
+        &-login{
+            background-color: white;
+            color: $color-black;
+            font-family: $font-base;
+            font-size: 18px;
+            text-decoration: none;
+        }
+        &-register{
+            background-color: white;
+            color: $color-black;
+            font-family: $font-base;
+            font-size: 18px;
+            border: 0.75px solid #3C3C3C;
+            padding: 13px 11px 13px 11px;
+            text-decoration: none;
+        }
+    }
+}
