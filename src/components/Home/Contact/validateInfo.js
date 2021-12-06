@@ -1,5 +1,5 @@
-export default function validateInfo(values) {
-    let errors = {};
+const validateInfo = (values) => {
+    let errors = [];
 
     // Name
     if (!values.name) {
@@ -18,3 +18,5 @@ export default function validateInfo(values) {
 
     return errors;
 }
+
+export default validateInfo;
