@@ -18,6 +18,8 @@ const useForm = (callback, validate) => {
         e.preventDefault();
 
         setErrors(validate);
+        
+
         setIsSubmitting(true);
     };
 

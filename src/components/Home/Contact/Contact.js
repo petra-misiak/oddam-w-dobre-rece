@@ -1,54 +1,82 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import BackgroundContactForm from '../../../assets/BackgroundContactForm.jpg';
 import Decoration from '../../../assets/Decoration.svg';
 import Facebook from '../../../assets/Facebook.svg';
 import Instagram from '../../../assets/Instagram.svg';
-// import useForm from './useForm';
-import validate from './validateInfo';
+
 
 const Contact = () => {
+    const [enteredName, setEnteredName] = useState('');
+    const [enteredNameTouched, setEnteredNameTouched] = useState(false);
 
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [message, setMessage] = useState("");
+    const [enteredEmail, setEnteredEmail] = useState("");
+    const [enteredEmailTouched, setEnteredEmailTouched] = useState(false);
 
+    const [enteredMessage, setEnteredMessage] = useState('');
+    const [enteredMessageTouched, setEnteredMessageTouched] = useState(false);
 
-    useEffect(() => {
+    const enteredNameIsValid = enteredName.trim() !== '';
+    const nameInputIsInvalid = !enteredNameIsValid && enteredNameTouched;
+
+    const enteredEmailIsValid = enteredEmail.includes("@");
+    const enteredEmailIsInvalid = !enteredEmailIsValid && enteredEmailTouched;
+
+    const enteredMessageIsValid = enteredMessage.length;
+    const enteredMessageIsInvalid = !enteredMessageIsValid && enteredMessageTouched;
+
+    let formIsValid = false;
+
+    if (enteredNameIsValid) {
+        formIsValid = true;
+    }
+
+    const handleNameInputChange = (event) => {
+        setEnteredName(event.target.value);
+    };
+    const handleEmailInputChange = event => {
+        setEnteredEmail(event.target.value)
+    };
+
+    const handleMessageInputChange = (event) => {
+        setEnteredMessage(event.target.value)
+    };
+
+    const handleNameInputBlur = (event) => {
+        setEnteredNameTouched(true)
+    };
+
+    const handleEmailInputBlur = (event) => {
+        setEnteredEmailTouched(true)
+    };
+
+    const handleMessageInputBlur = (event) => {
+        setEnteredMessageTouched(true)
+    };
+
+    const handleFormSubmission = (event) => {
+        event.preventDefault();
+        const data = { enteredName, enteredEmail, enteredMessage };
         fetch("https://fer-api.coderslab.pl/v1/portfolio/contact", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({
-                name,
-                email,
-                message
-            })
+            body: JSON.stringify(data)
         }).then(
             (response) => (response.json()
             ).then((reponse) => {
                 if (response.status === "success") {
                     alert("Wiadomość zostala wyslana");
-
                 } else if (response.status === "fail") {
                     alert("Wiadomosc nie zostala wyslana, sprobuj ponownie.")
                 }
             })
         )
-    })
+    }
 
-
-    const handleNameChange = (event) => {
-        setName(event.target.value)
-    };
-
-    const handleEmailChange = (event) => {
-        setEmail(event.target.value)
-    };
-
-    const handleMessageChange = (event) => {
-        setMessage(event.target.value)
-    };
+    const nameInputClasses = nameInputIsInvalid ? 'contact-form-all-name-input-invalid' : 'contact-form-all-name-input';
+    const emailInputClasses = enteredEmailIsInvalid ? 'contact-form-all-email-input-invalid' : 'contact-form-all-email-input';
+    const messageInputClasses = enteredMessageIsInvalid ? 'contact-form-all-message-textarea-invalid' : 'contact-form-all-message-textarea';
 
     return (
         <section className="contact" id="contact">
@@ -59,19 +87,23 @@ const Contact = () => {
                 <h3 className="contact-right-h3">Skontaktuj się z nami</h3>
                 <img src={Decoration} alt="Decoration"></img>
             </div>
-            <form className="contact-form" >
+            <form className="contact-form" onSubmit={handleFormSubmission}>
                 <div className="contact-form-all">
                     <div className="contact-form-all-name">
-                        <label className="contact-form-all-name-label">Wpisz swoje imię</label>
+                        <label htmlFor='name' className="contact-form-all-name-label">Wpisz swoje imię</label>
                         <input
                             id="name"
                             type="text"
                             name="name"
-                            className="contact-form-all-name-input"
+                            className={nameInputClasses}
                             placeholder="Krzysztof"
-                            value={name}
-                            onChange={handleNameChange}
+                            value={enteredName}
+                            onChange={handleNameInputChange}
+                            onBlur={handleNameInputBlur}
                         />
+                        {nameInputIsInvalid && (
+                            <p className="error-text">Podane imnię jest nieprawidlowe!</p>
+                        )}
                     </div>
                     <div className="contact-form-all-email">
                         <label className="contact-form-all-email-label">Wpisz swój email</label>
@@ -79,30 +111,37 @@ const Contact = () => {
                             id="email"
                             type="email"
                             name="email"
-                            className="contact-form-all-email-input"
+                            className={emailInputClasses}
                             placeholder="abc@xyz.pl"
-                            value={email}
-                            onChange={handleEmailChange}
+                            value={enteredEmail}
+                            onChange={handleEmailInputChange}
+                            onBlur={handleEmailInputBlur}
                         />
+                        {enteredEmailIsInvalid && (
+                            <p className="error-text">Podany email jest nieprawidlowy!</p>
+                        )}
                     </div>
                 </div>
                 <div className="contact-form-all-message">
                     <label className="contact-form-all-message-label">Wpisz swoją wiadomość</label>
                     <textarea
+                        rows="5"
                         id="message"
                         type="text"
                         name="message"
-                        className="contact-form-all-message-textarea"
-                        placeholder="Lorem ipsum dolor sit amet, 
-                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
-                    dolore magna aliqua. Ut enim ad minim veniam,quis nostrud 
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-                        value={message}
-                        onChange={handleMessageChange}
+                        className={messageInputClasses}
+                        placeholder="Lorem ipsum dolor sit amet,consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                        value={enteredMessage}
+                        onChange={handleMessageInputChange}
+                        onBlur={handleMessageInputBlur}
+                        maxLength={120}
                     ></textarea>
+                    {enteredMessageIsInvalid && (
+                        <p className="error-text">Wiadomośc musi mieć conajmniej 120 znaków!</p>
+                    )}
                 </div>
                 <div className="contact-form-all-button">
-                    <button className="contact-form-all-button-send" type="submit">Wyślij</button>
+                    <button className="contact-form-all-button-send" type="submit" disabled={!formIsValid}>Wyślij</button>
                 </div>
             </form>
             <div className="contact-footer">
