@@ -9,7 +9,7 @@ const NavBar = () => {
                 <Link to="/rejestracja" className="registration-top-first1">Założ konto</Link>
             </nav>
             <ul className="nav-bar">
-                <Link to="/home" className="nav-bar-all">Start</Link>
+                <Link to="/" className="nav-bar-all">Start</Link>
                 <Scroll
                     activeClass="active"
                     to="steps"

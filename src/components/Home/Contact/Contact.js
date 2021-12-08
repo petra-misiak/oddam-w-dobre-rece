@@ -62,15 +62,19 @@ const Contact = () => {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(data)
-        }).then(
-            (response) => (response.json()
-            ).then((reponse) => {
-                if (response.status === "success") {
-                    alert("Wiadomość zostala wyslana");
-                } else if (response.status === "fail") {
-                    alert("Wiadomosc nie zostala wyslana, sprobuj ponownie.")
-                }
-            })
+        }).then((response) => (response.json()
+        ).then((data) => {
+            if (response.ok) {
+                console.log("success");
+                alert("Wiadomość zostala wyslana");
+                return;
+            } else if (response.status === 400) {
+                console.log("error");
+                alert("Wiadomosc nie zostala wyslana, sprobuj ponownie.")
+            }
+        }).catch(err => {
+            // console.log("error")
+        })
         )
     }
 

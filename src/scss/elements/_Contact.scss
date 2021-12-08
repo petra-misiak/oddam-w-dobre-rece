@@ -22,7 +22,7 @@
         position: absolute;
         right: 236px;
         text-align: center;
-        top: 130px;
+        top: 90px;
         &-h3{
             font-family: $font-base;
             font-size: 38px;
@@ -35,7 +35,7 @@
         position: absolute;
         right: 175px;
         text-align: center;
-        top: 300px;
+        top: 240px;
         &-all{
             display: flex;
             &-name{
@@ -83,7 +83,7 @@
                     border-top: none;
                     border-right: none;
                     border-left: none;
-                    color: #3C3C3C26;
+                    color: $color-black;
                     font-family: $font-base;
                     font-size: 18px;
                     &-invalid{
@@ -113,7 +113,7 @@
                     border-top: none;
                     border-right: none;
                     border-left: none;
-                    color: #3C3C3C26;
+                    color: $color-primary;
                     font-family: $font-base;
                     font-size: 18px;
                     overflow: hidden;
