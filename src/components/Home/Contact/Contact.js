@@ -5,7 +5,7 @@ import Facebook from '../../../assets/Facebook.svg';
 import Instagram from '../../../assets/Instagram.svg';
 
 
-const Contact = () => {
+const Contact = (props) => {
     const [enteredName, setEnteredName] = useState('');
     const [enteredNameTouched, setEnteredNameTouched] = useState(false);
 
@@ -21,7 +21,7 @@ const Contact = () => {
     const enteredEmailIsValid = enteredEmail.includes("@");
     const enteredEmailIsInvalid = !enteredEmailIsValid && enteredEmailTouched;
 
-    const enteredMessageIsValid = enteredMessage.length;
+    const enteredMessageIsValid = enteredMessage.trim().length === 120;
     const enteredMessageIsInvalid = !enteredMessageIsValid && enteredMessageTouched;
 
     let formIsValid = false;
@@ -61,7 +61,7 @@ const Contact = () => {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify({ data })
         }).then((response) => (response.json()
         ).then((data) => {
             if (response.ok) {
